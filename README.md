@@ -13,7 +13,7 @@ SceneHold is a free Chrome extension that gives you more control over YouTube ad
 - Automatic use of YouTube skip and close controls when available.
 - Optional ad muting with audio restoration that respects manual changes.
 - Continue, Pause, or Smart actions after an ad, with optional resumption of SceneHold-created post-ad pauses.
-- A local 10-action support milestone, enabled by default. Its capped count stays in Chrome, can be reset, and is deleted when disabled.
+- A local impact dashboard, enabled by default, with cumulative counts for confirmed skips, muted ad breaks, overlay dismissals, and playback pauses, plus estimated time saved when player timing is available. A one-time support card and subtle toolbar badge appear at 10 actions; counting continues afterward. Stats stay local and are deleted when tracking is disabled in Settings.
 - Quick popup controls and a toolbar indicator for SceneHold’s active state.
 
 ## Platform support
