@@ -50,7 +50,43 @@
         <a href="#terms">Terms</a>
         <a class="nav-support" href="#support">Support SceneHold</a>
       </nav>
+      <a class="nav-support-top" href="#support" aria-label="Support SceneHold">
+        <span aria-hidden="true">☕</span> Support
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-haspopup="dialog"
+        aria-controls="mobile-drawer"
+        aria-expanded="false"
+        data-menu-open
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      </button>
     </div>
+    <dialog class="mobile-drawer" id="mobile-drawer" aria-labelledby="mobile-drawer-title">
+      <div class="mobile-drawer-header">
+        <div>
+          <p class="section-kicker">SceneHold</p>
+          <h2 id="mobile-drawer-title">Explore</h2>
+        </div>
+        <button class="mobile-drawer-close" type="button" aria-label="Close navigation menu" data-menu-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+        </button>
+      </div>
+      <nav class="mobile-drawer-links" aria-label="Mobile navigation">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#impact">Your impact</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About SceneHold</a>
+        <a href="#privacy">Privacy policy</a>
+        <a href="#terms">Terms of service</a>
+        <a href="#refunds">Refund policy</a>
+        <a class="drawer-support" href="#support">Support SceneHold</a>
+      </nav>
+    </dialog>
   </header>
 
   <main id="main-content">
@@ -559,6 +595,7 @@
       </nav>
     </div>
   </footer>
+  <script src="./mobile-menu.js" defer></script>
 </body>
 
 </html>
