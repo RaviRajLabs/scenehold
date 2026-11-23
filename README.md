@@ -2,8 +2,8 @@
 
 SceneHold is a free Chrome extension that gives you more control over YouTube ad breaks and background playback.
 
-**Website:** [ravirajlabs.github.io/scenehold-site](https://ravirajlabs.github.io/scenehold-site/)  
-**Privacy Policy:** [Read the policy](https://ravirajlabs.github.io/scenehold-site/#privacy)  
+**Website:** [ravirajlabs.github.io/scenehold](https://ravirajlabs.github.io/scenehold/)  
+**Privacy Policy:** [Read the policy](https://ravirajlabs.github.io/scenehold/#privacy)  
 **Support:** [Support SceneHold](https://dodo.pe/scenehold)
 
 ## Features
