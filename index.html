@@ -6,24 +6,39 @@
     <meta name="theme-color" content="#0b1020" />
     <meta
       name="description"
-      content="SceneHold is a free Chrome extension for YouTube ad muting, available skip controls, smart pause, and background playback."
+      content="Free Chrome extension to mute YouTube ads, use available skip controls, and manage background playback. Choose when videos continue, pause, or resume."
     />
+    <meta name="author" content="Ravi Raj" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
     <meta
       property="og:title"
-      content="SceneHold — YouTube Ad Mute, Auto-Skip &amp; Smart Pause"
+      content="SceneHold — YouTube Ad Mute &amp; Skip Controls for Chrome"
     />
     <meta
       property="og:description"
-      content="Free YouTube playback controls for Chrome. No ads, remote analytics, or subscriptions."
+      content="Free Chrome extension to mute YouTube ads, activate available skip controls, and manage background playback. No subscription required."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SceneHold" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary" />
     <meta
       property="og:url"
       content="https://ravirajlabs.github.io/scenehold/"
     />
     <link rel="canonical" href="https://ravirajlabs.github.io/scenehold/" />
+    <link rel="sitemap" type="application/xml" href="https://ravirajlabs.github.io/scenehold/sitemap.xml" />
     <link rel="icon" href="./public/icons/scenehold-32.png" sizes="32x32" />
-    <title>SceneHold — YouTube Ad Mute, Auto-Skip &amp; Smart Pause</title>
+    <title>SceneHold — YouTube Ad Mute &amp; Skip Controls for Chrome</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SceneHold",
+        "url": "https://ravirajlabs.github.io/scenehold/",
+        "description": "A free Chrome extension for YouTube ad muting, available skip controls, and customizable background playback."
+      }
+    </script>
     <style>
       :root {
         color-scheme: dark;
@@ -485,6 +500,32 @@
         color: var(--text-secondary);
         background: rgba(246, 199, 107, 0.055);
         font-size: 12px;
+      }
+
+      .faq-list {
+        display: grid;
+        max-width: 860px;
+        gap: 12px;
+      }
+
+      .faq-item {
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: rgba(17, 26, 43, 0.72);
+      }
+
+      .faq-item summary {
+        padding: 18px 20px;
+        color: var(--text);
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .faq-item p {
+        margin: 0;
+        padding: 0 20px 18px;
+        color: var(--text-secondary);
       }
 
       .story-section {
@@ -949,6 +990,7 @@
         </a>
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
           <a href="#about">About</a>
           <a href="#privacy">Privacy</a>
           <a href="#terms">Terms</a>
@@ -968,12 +1010,12 @@
 
       <section class="container hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Free YouTube playback controls for Chrome</p>
-          <h1 id="hero-title">YouTube playback,<br /><span>on your terms.</span></h1>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Free YouTube controls for Chrome</p>
+          <h1 id="hero-title">YouTube ad controls<br /><span>and playback on your terms.</span></h1>
           <p>
-            SceneHold is a free Manifest V3 Chrome extension for YouTube.
-            Choose how ads and background playback are handled, with controls
-            for Listening and Watching, ad actions, and what happens after a break.
+            SceneHold is a free Chrome extension for YouTube ad muting, activating
+            available skip or close controls, and controlling background playback.
+            Choose whether videos continue, pause, or resume when you switch tabs.
           </p>
           <div class="hero-actions">
             <a
@@ -1018,9 +1060,9 @@
       <section class="container section" id="features" aria-labelledby="features-title">
         <div class="section-heading">
           <p class="section-kicker">Playback, made personal</p>
-          <h2 id="features-title">What SceneHold actually does.</h2>
+          <h2 id="features-title">YouTube ad controls and background playback for Chrome.</h2>
           <p>
-            Configure the controls you want, and SceneHold applies them to desktop YouTube playback.
+            Set up YouTube ad muting, available skip controls, and background playback for the way you watch on desktop Chrome.
           </p>
         </div>
         <div class="feature-grid">
@@ -1042,15 +1084,15 @@
             <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M4 6h16M7 6v12M17 6v12M4 18h16" /><path d="m10 10 4 2-4 2z" /></svg>
             </span>
-            <h3>Available ad controls</h3>
-            <p>SceneHold automatically activates YouTube’s skip or close control when a compatible control becomes available.</p>
+            <h3>YouTube ad skip controls</h3>
+            <p>SceneHold activates YouTube’s skip or close control when one becomes available. Ads without a compatible control continue normally.</p>
           </article>
           <article class="feature-card">
             <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z" /><path d="M15 9a4 4 0 0 1 0 6M17.5 6.5a8 8 0 0 1 0 11" /></svg>
             </span>
-            <h3>Optional ad muting</h3>
-            <p>Mute supported ad breaks and restore audio when the main video resumes, while respecting manual audio changes you make.</p>
+            <h3>YouTube ad muting</h3>
+            <p>Optionally mute supported ad breaks and restore audio when the main video resumes, while respecting manual audio changes you make.</p>
           </article>
           <article class="feature-card">
             <span class="feature-icon" aria-hidden="true">
@@ -1082,9 +1124,35 @@
           </article>
         </div>
         <p class="feature-caveat">
-          <strong>About Auto Skip:</strong> SceneHold automatically activates YouTube’s skip control when one becomes available.
-          Ads without a skip control cannot be skipped, and YouTube interface changes may affect compatibility.
+          <strong>About ad skipping:</strong> SceneHold uses YouTube’s own skip or close control when it appears.
+          It cannot skip ad formats without a compatible control, and YouTube interface changes may affect compatibility.
         </p>
+      </section>
+
+      <section class="container section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="section-kicker">Common questions</p>
+          <h2 id="faq-title">YouTube playback extension FAQ</h2>
+          <p>Learn what SceneHold can do, how its controls work, and what it supports today.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does SceneHold skip every YouTube ad?</summary>
+            <p>No. SceneHold activates YouTube’s skip or close control when YouTube provides one. It does not remove or block ads, and ads without a compatible control play normally. You can also choose to mute supported ad breaks.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can SceneHold keep YouTube playing in the background?</summary>
+            <p>Listening mode keeps playback going when you switch tabs. In Watching mode, choose to continue playback, pause while the tab is inactive, or pause and resume when you return. Playback still depends on YouTube and Chrome being able to play the video.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is SceneHold free, and does the extension collect data?</summary>
+            <p>SceneHold’s features are free, and support is optional. The extension stores preferences and its small support milestone count in your Chrome profile; it does not send those settings or playback signals to SceneHold servers.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does SceneHold work with Netflix, Prime Video, or JioHotstar?</summary>
+            <p>Not currently. SceneHold supports desktop YouTube in Chrome. Support for other streaming platforms is something the developer hopes to explore in the future.</p>
+          </details>
+        </div>
       </section>
 
       <section class="story-section" id="about" aria-labelledby="about-title">
@@ -1337,3 +1405,4 @@
     </footer>
   </body>
 </html>
+
