@@ -1001,17 +1001,50 @@ h3 {
 
 @media (max-width: 880px) {
   .nav-row {
-    flex-wrap: wrap;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 10px 18px;
     padding-block: 12px;
   }
 
   .nav-links {
-    flex: 1 1 100%;
-    justify-content: flex-start;
-    gap: 19px;
-    overflow-x: auto;
-    padding-bottom: 2px;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    gap: 8px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .nav-links a {
+    display: flex;
+    min-width: 0;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: 1px solid rgba(145, 170, 255, 0.13);
+    border-radius: 11px;
+    background: rgba(17, 26, 43, 0.68);
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .nav-links .nav-support {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    z-index: 1;
+    min-height: 34px;
+    padding: 6px 11px;
+    border: 1px solid rgba(145, 170, 255, 0.36);
+    border-radius: 999px;
+    color: var(--accent);
+    background: rgba(17, 26, 43, 0.9);
+    font-size: 11px;
   }
 
   .hero {
@@ -1049,10 +1082,8 @@ h3 {
   }
 
   .nav-row {
-    min-height: 68px;
-    flex-wrap: wrap;
-    gap: 9px;
-    padding-block: 12px;
+    gap: 8px;
+    padding-block: 10px;
   }
 
   .brand img {
@@ -1061,20 +1092,19 @@ h3 {
   }
 
   .nav-links {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 19px;
-    overflow-x: auto;
-    padding-bottom: 2px;
+    gap: 6px;
   }
 
-  .nav-links a {
-    flex: 0 0 auto;
-    font-size: 12px;
+  .nav-links a:not(.nav-support) {
+    min-height: 34px;
+    padding-inline: 3px;
+    font-size: 10px;
   }
 
   .nav-links .nav-support {
-    padding: 5px 10px;
+    top: 10px;
+    padding: 5px 9px;
+    font-size: 11px;
   }
 
   .hero {
