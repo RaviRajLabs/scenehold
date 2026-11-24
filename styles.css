@@ -1273,7 +1273,7 @@ h3 {
   color: var(--text-muted);
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1040px) {
   .nav-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
