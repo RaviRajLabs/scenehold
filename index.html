@@ -42,8 +42,10 @@
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#impact">Impact</a>
+        <a href="#pro-waitlist">Pro waitlist</a>
         <a href="#faq">FAQ</a>
         <a href="#about">About</a>
         <a href="#privacy">Privacy</a>
@@ -53,16 +55,11 @@
       <a class="nav-support-top" href="#support" aria-label="Support SceneHold">
         <span aria-hidden="true">☕</span> Support
       </a>
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-haspopup="dialog"
-        aria-controls="mobile-drawer"
-        aria-expanded="false"
-        data-menu-open
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-haspopup="dialog"
+        aria-controls="mobile-drawer" aria-expanded="false" data-menu-open>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
       </button>
     </div>
     <dialog class="mobile-drawer" id="mobile-drawer" aria-labelledby="mobile-drawer-title">
@@ -72,13 +69,17 @@
           <h2 id="mobile-drawer-title">Explore</h2>
         </div>
         <button class="mobile-drawer-close" type="button" aria-label="Close navigation menu" data-menu-close>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
         </button>
       </div>
       <nav class="mobile-drawer-links" aria-label="Mobile navigation">
         <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#impact">Your impact</a>
+        <a href="#pro-waitlist">Pro waitlist</a>
         <a href="#faq">FAQ</a>
         <a href="#about">About SceneHold</a>
         <a href="#privacy">Privacy policy</a>
@@ -260,6 +261,62 @@
       </p>
     </section>
 
+    <section class="container section how-it-works" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-heading">
+        <p class="section-kicker">Easy to get started</p>
+        <h2 id="how-title">Your playback, set up in three simple steps.</h2>
+        <p>Get the controls you want, then let SceneHold follow your preferences while you watch.</p>
+      </div>
+      <ol class="how-steps">
+        <li class="how-step">
+          <div class="how-step-top">
+            <span class="how-step-number">01</span>
+            <span class="how-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </span>
+          </div>
+          <p class="how-step-label">Start here</p>
+          <h3>Add SceneHold</h3>
+          <p>Install SceneHold in Chrome or Edge and pin it to your toolbar. It&rsquo;s free, with no account required.
+          </p>
+        </li>
+        <li class="how-step">
+          <div class="how-step-top">
+            <span class="how-step-number">02</span>
+            <span class="how-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 7h16M4 17h16M4 12h16" />
+                <circle cx="9" cy="7" r="2" />
+                <circle cx="15" cy="12" r="2" />
+                <circle cx="8" cy="17" r="2" />
+              </svg>
+            </span>
+          </div>
+          <p class="how-step-label">Make it yours</p>
+          <h3>Choose your settings</h3>
+          <p>Pick Listening or Watching mode, then set your preferences for ad breaks and background playback. Change
+            them anytime.</p>
+        </li>
+        <li class="how-step">
+          <div class="how-step-top">
+            <span class="how-step-number">03</span>
+            <span class="how-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 9 6-9 6z" />
+                <path d="M5 5v14" />
+              </svg>
+            </span>
+          </div>
+          <p class="how-step-label">Back to your video</p>
+          <h3>Enjoy your flow</h3>
+          <p>SceneHold follows your choices on desktop YouTube, using available skip or close controls and your playback
+            settings.</p>
+        </li>
+      </ol>
+    </section>
+
     <section class="container section product-screenshots" id="screenshots" aria-labelledby="screenshots-title">
       <div class="section-heading">
         <p class="section-kicker">A closer look</p>
@@ -317,6 +374,42 @@
       </figure>
     </section>
 
+    <section class="container pro-waitlist-section" id="pro-waitlist" aria-labelledby="pro-waitlist-title">
+      <div class="pro-waitlist-card">
+        <div class="pro-waitlist-copy">
+          <p class="section-kicker">SceneHold Pro · in development</p>
+          <h2 id="pro-waitlist-title">More control is on the way.</h2>
+          <p class="pro-waitlist-description">
+            Join the optional email waitlist to hear when SceneHold Pro is ready. Your current SceneHold features will
+            remain free.
+          </p>
+          <div class="pro-ideas" aria-label="SceneHold Pro ideas being explored">
+            <span class="pro-ideas-label">Ideas we&rsquo;re exploring</span>
+            <span class="pro-idea-chip">Per-channel rules</span>
+            <span class="pro-idea-chip">Custom resume delays</span>
+            <span class="pro-idea-chip">More streaming platforms</span>
+          </div>
+        </div>
+        <aside class="pro-waitlist-panel" aria-label="Join the SceneHold Pro waitlist">
+          <span class="pro-mail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
+              <path d="m4.5 7 7.5 5.5L19.5 7" />
+            </svg>
+          </span>
+          <p class="pro-panel-kicker">Get the launch update</p>
+          <h3>Be first to know.</h3>
+          <p class="pro-panel-copy">A short signup for Pro news. No payment or commitment.</p>
+          <a class="button button-primary pro-waitlist-button" href="https://forms.gle/jp2t4CqQLJDTnqk6A"
+            target="_blank" rel="noopener noreferrer">
+            Join the Pro waitlist <span aria-hidden="true">&rarr;</span>
+          </a>
+          <p class="pro-panel-note">Opens Google Forms in a new tab.</p>
+          <a class="pro-privacy-link" href="#privacy">How your email is handled</a>
+        </aside>
+      </div>
+    </section>
+
     <section class="container section" id="faq" aria-labelledby="faq-title">
       <div class="section-heading">
         <p class="section-kicker">Common questions</p>
@@ -338,8 +431,9 @@
         </details>
         <details class="faq-item">
           <summary>Is SceneHold free, and does the extension collect data?</summary>
-          <p>SceneHold’s features are free, and support is optional. Preferences and cumulative impact stats stay in
-            your browser profile; SceneHold does not send those settings or playback signals to a server.</p>
+          <p>SceneHold’s current features are free, and support is optional. Extension preferences and impact stats stay
+            in your browser; playback data is not sent to a server. The separate Pro waitlist uses the information you
+            submit through Google Forms for launch updates. See the <a href="#privacy">Privacy Policy</a>.</p>
         </details>
         <details class="faq-item">
           <summary>Does SceneHold work with Netflix, Prime Video, or JioHotstar?</summary>
@@ -425,7 +519,7 @@
         <div class="policy-stack">
           <section class="policy-card" id="privacy" aria-labelledby="privacy-title">
             <h2 id="privacy-title">Privacy Policy</h2>
-            <p class="policy-date">Last updated: November 23, 2026</p>
+            <p class="policy-date">Last updated: November 24, 2026</p>
 
             <h3>What SceneHold accesses</h3>
             <p>
@@ -470,6 +564,19 @@
               It does not include a SceneHold-operated backend.
             </p>
 
+            <h3>Optional SceneHold Pro waitlist</h3>
+            <p>
+              If you choose to join the optional Pro waitlist, Google Forms processes the information you submit,
+              including your email address. I use it to manage the waitlist and send updates about SceneHold Pro’s
+              availability. This is separate from the extension; your YouTube activity, settings, and impact stats are
+              not included with your signup. To request removal from the waitlist, contact
+              <a href="mailto:iamraviraj0804@gmail.com?subject=Remove%20me%20from%20the%20SceneHold%20Pro%20waitlist">me
+                by email</a>.
+              Google’s handling of form data is described in its
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy
+                Policy</a>.
+            </p>
+
             <h3>Email and optional payments</h3>
             <p>
               If you email me, your message and the details you choose to
@@ -485,7 +592,7 @@
             <h3>Third-party services</h3>
             <p>
               SceneHold works with YouTube in your browser and links to
-              third-party services such as Dodo Payments. Those services
+              third-party services such as Google Forms and Dodo Payments. Those services
               operate under their own terms and privacy policies. GitHub
               Pages hosts this site and may process technical request data
               under GitHub’s policies. SceneHold is an independent project
