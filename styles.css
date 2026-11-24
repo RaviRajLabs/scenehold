@@ -267,6 +267,13 @@ h1 span {
   transform: none;
 }
 
+.chrome-store-icon {
+  display: block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+}
+
 .button-primary {
   color: #07102f;
   background: linear-gradient(105deg, var(--brand-cyan), var(--brand-blue));
