@@ -163,12 +163,12 @@
       </div>
     </section>
     <section class="container section how-it-works" id="how-it-works" aria-labelledby="how-title">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="section-kicker">Easy to get started</p>
         <h2 id="how-title">Your playback, set up in three simple steps.</h2>
         <p>Get the controls you want, then let SceneHold follow your preferences while you watch.</p>
       </div>
-      <ol class="how-steps">
+      <ol class="how-steps" data-reveal="secondary">
         <li class="how-step">
           <div class="how-step-top">
             <span class="how-step-number">01</span>
@@ -221,14 +221,14 @@
 
 
     <section class="container section" id="features" aria-labelledby="features-title">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="section-kicker">Playback, made personal</p>
         <h2 id="features-title">YouTube ad controls and background playback for Chrome and Edge.</h2>
         <p>
           Set up YouTube ad muting, available skip controls, and background playback for the way you watch on desktop.
         </p>
       </div>
-      <div class="feature-grid">
+      <div class="feature-grid" data-reveal="secondary">
         <article class="feature-card">
           <span class="feature-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -320,7 +320,7 @@
             At 10 actions, a one-time support card and toolbar badge appear; counting continues afterward.</p>
         </article>
       </div>
-      <p class="feature-caveat">
+      <p class="feature-caveat" data-reveal="tertiary">
         <strong>About ad skipping:</strong> SceneHold uses YouTube’s own skip or close control when it appears.
         It cannot skip ad formats without a compatible control, and YouTube interface changes may affect compatibility.
       </p>
@@ -329,12 +329,12 @@
 
 
     <section class="container section product-screenshots" id="screenshots" aria-labelledby="screenshots-title">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="section-kicker">A closer look</p>
         <h2 id="screenshots-title">Simple controls. Playback your way.</h2>
         <p>Explore the controls one screen at a time.</p>
       </div>
-      <div class="product-gallery" data-screenshot-gallery>
+      <div class="product-gallery" data-screenshot-gallery data-reveal="secondary">
         <div class="product-gallery-rail" role="tablist" aria-label="SceneHold screens">
           <button class="product-gallery-tab is-active" id="screenshot-tab-popup" type="button" role="tab"
             aria-selected="true" aria-controls="screenshot-panel-popup" tabindex="0" data-screenshot-tab="popup">
@@ -375,7 +375,7 @@
     </section>
 
     <section class="container section impact-section" id="impact" aria-labelledby="impact-title">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="section-kicker">Your impact</p>
         <h2 id="impact-title">See what SceneHold handles for you.</h2>
         <p>
@@ -383,7 +383,7 @@
           playback pauses, and estimated time saved all on your device.
         </p>
       </div>
-      <figure class="impact-preview">
+      <figure class="impact-preview" data-reveal="secondary">
         <img src="./public/screenshots/scenehold-impact-dashboard-1280x800.png" width="1280" height="800"
           alt="SceneHold's local impact dashboard with totals for ad skips, estimated time saved, muted ad breaks, overlays dismissed, and playback pauses."
           loading="lazy" decoding="async" />
@@ -395,7 +395,7 @@
     </section>
 
     <section class="container pro-waitlist-section" id="pro-waitlist" aria-labelledby="pro-waitlist-title">
-      <div class="pro-waitlist-card">
+      <div class="pro-waitlist-card" data-reveal>
         <div class="pro-waitlist-copy">
           <p class="section-kicker">SceneHold Pro · in development</p>
           <h2 id="pro-waitlist-title">More control is on the way.</h2>
@@ -733,6 +733,7 @@
   </footer>
   <script src="./mobile-menu.js" defer></script>
   <script src="./screenshot-gallery.js" defer></script>
+  <script src="./scroll-reveal.js" defer></script>
 </body>
 
 </html>
