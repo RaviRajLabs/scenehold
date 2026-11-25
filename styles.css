@@ -675,8 +675,10 @@ h3 {
 
 .product-gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 26px;
+  max-width: 1120px;
+  margin-inline: auto;
 }
 
 .product-shot {
@@ -1294,13 +1296,7 @@ h3 {
   }
 
   .product-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .product-shot:last-child {
-    grid-column: 1 / -1;
-    width: calc(50% - 9px);
-    justify-self: center;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .nav-support-top,
