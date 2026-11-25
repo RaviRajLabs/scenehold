@@ -15,8 +15,21 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="SceneHold" />
   <meta property="og:locale" content="en_IN" />
-  <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="https://ravirajlabs.github.io/scenehold/" />
+  <meta property="og:image"
+    content="https://ravirajlabs.github.io/scenehold/public/screenshots/scenehold-popup-1280x800.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt"
+    content="SceneHold popup with Listening and Watching playback controls for YouTube." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SceneHold YouTube Ad Mute, Auto-Skip &amp; Smart Pause" />
+  <meta name="twitter:description"
+    content="Free playback controls for desktop YouTube: use available skip controls, mute ads, and choose what happens when you switch tabs." />
+  <meta name="twitter:image"
+    content="https://ravirajlabs.github.io/scenehold/public/screenshots/scenehold-popup-1280x800.png" />
+  <meta name="twitter:image:alt"
+    content="SceneHold popup with Listening and Watching playback controls for YouTube." />
   <link rel="canonical" href="https://ravirajlabs.github.io/scenehold/" />
   <link rel="sitemap" type="application/xml" href="https://ravirajlabs.github.io/scenehold/sitemap.xml" />
   <link rel="icon" href="./public/icons/scenehold-32.png" sizes="32x32" />
@@ -450,15 +463,32 @@
             your browser being able to play the video.</p>
         </details>
         <details class="faq-item">
+          <summary>How does Smart mode decide whether to pause after an ad?</summary>
+          <p>In Watching mode, Smart continues when the YouTube tab is visible and you have interacted with the page in
+            the last 60 seconds. It pauses when the tab is hidden. If the tab is visible but your presence is unclear,
+            it takes no action. Listening mode always continues playback.</p>
+        </details>
+        <details class="faq-item">
           <summary>Is SceneHold free, and does the extension collect data?</summary>
           <p>SceneHold’s current features are free, and support is optional. Extension preferences and impact stats stay
             in your browser; playback data is not sent to a server. The separate Pro waitlist uses the information you
             submit through Google Forms for launch updates. See the <a href="#privacy">Privacy Policy</a>.</p>
         </details>
         <details class="faq-item">
+          <summary>How do I install and set up SceneHold?</summary>
+          <p>The Chrome Web Store release is coming soon. Once available, install and pin SceneHold, then open its
+            toolbar popup to enable it and choose Listening or Watching mode. You can adjust ad and background playback
+            settings at any time.</p>
+        </details>
+        <details class="faq-item">
           <summary>Does SceneHold work with Netflix, Prime Video, or JioHotstar?</summary>
           <p>Not currently. SceneHold supports desktop YouTube in Chrome and Microsoft Edge. Support for other streaming
             platforms is something the developer hopes to explore in the future.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does SceneHold work with YouTube Music, mobile YouTube, or embedded videos?</summary>
+          <p>No. SceneHold currently supports desktop YouTube at youtube.com in Chrome and Microsoft Edge. YouTube
+            Music, mobile YouTube, embedded players, and other video platforms are not supported.</p>
         </details>
       </div>
     </section>
