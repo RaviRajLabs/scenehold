@@ -20,6 +20,9 @@
   --content-width: 1160px;
   --radius-lg: 24px;
   --radius-md: 16px;
+  --motion-fast: 150ms;
+  --motion-standard: 190ms;
+  --ease-out-product: cubic-bezier(0.16, 1, 0.3, 1);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
@@ -117,11 +120,12 @@ img {
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition: color 160ms ease;
+  transition: opacity var(--motion-fast) ease-out;
 }
 
 .nav-links a:hover {
   color: var(--accent);
+  opacity: 0.88;
 }
 
 .nav-links .nav-support {
@@ -145,6 +149,68 @@ img {
   gap: 64px;
   padding-block: 92px 104px;
   background: radial-gradient(ellipse at 78% 45%, rgba(var(--brand-blue-rgb), 0.055), transparent 30rem);
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html.has-scroll-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 360ms ease-out,
+    transform 360ms var(--ease-out-product);
+}
+
+html.has-scroll-reveal [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.has-scroll-reveal [data-reveal="secondary"] {
+  transition-delay: 70ms;
+}
+
+html.has-scroll-reveal [data-reveal="tertiary"] {
+  transition-delay: 125ms;
+}
+
+.hero-copy .eyebrow,
+.hero-copy h1,
+.hero-copy > p,
+.hero-actions,
+.hero-note,
+.hero-facts {
+  animation: hero-enter 440ms var(--ease-out-product) both;
+}
+
+.hero-copy h1 {
+  animation-delay: 40ms;
+}
+
+.hero-copy > p {
+  animation-delay: 75ms;
+}
+
+.hero-actions {
+  animation-delay: 110ms;
+}
+
+.hero-note {
+  animation-delay: 150ms;
+}
+
+.hero-facts {
+  animation-delay: 65ms;
 }
 
 .hero-copy {
@@ -247,11 +313,7 @@ h1 span {
   font-size: 14px;
   font-weight: 750;
   text-decoration: none;
-  transition:
-    transform 160ms ease,
-    border-color 160ms ease,
-    background 160ms ease,
-    box-shadow 160ms ease;
+  transition: transform var(--motion-fast) var(--ease-out-product), opacity var(--motion-fast) ease-out;
 }
 
 .button:hover {
@@ -265,6 +327,16 @@ h1 span {
 
 .button:disabled:hover {
   transform: none;
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.button:focus-visible,
+.pro-privacy-link:focus-visible {
+  outline: 2px solid var(--brand-cyan);
+  outline-offset: 3px;
 }
 
 .chrome-store-icon {
@@ -281,7 +353,7 @@ h1 span {
 }
 
 .button-primary:hover {
-  box-shadow: 0 14px 34px rgba(var(--brand-blue-rgb), 0.32);
+  opacity: 0.96;
 }
 
 .button-secondary {
@@ -291,8 +363,7 @@ h1 span {
 }
 
 .button-secondary:hover {
-  border-color: rgba(var(--brand-cyan-rgb), 0.5);
-  background: var(--surface-raised);
+  opacity: 0.92;
 }
 
 .hero-note {
@@ -331,13 +402,11 @@ h1 span {
     radial-gradient(ellipse at 100% 0%, rgba(var(--brand-cyan-rgb), 0.14), transparent 19rem),
     linear-gradient(150deg, rgba(25, 34, 49, 0.98), rgba(14, 22, 38, 0.98));
   box-shadow: 0 32px 90px rgba(0, 0, 0, 0.4), 0 0 70px rgba(var(--brand-blue-rgb), 0.085);
-  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+  transition: transform var(--motion-standard) var(--ease-out-product);
 }
 
 .hero-facts:hover {
-  transform: translateY(-4px);
-  border-color: rgba(var(--brand-cyan-rgb), 0.36);
-  box-shadow: 0 38px 100px rgba(0, 0, 0, 0.44), 0 0 80px rgba(var(--brand-blue-rgb), 0.11);
+  transform: translateY(-2px);
 }
 
 .hero-facts-brand {
@@ -504,14 +573,12 @@ h2 {
   border-radius: 20px;
   background: linear-gradient(155deg, rgba(25, 34, 49, 0.88), rgba(17, 24, 35, 0.78));
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  transition: transform 200ms ease, border-color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform var(--motion-standard) var(--ease-out-product), opacity var(--motion-standard) ease-out;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(var(--brand-cyan-rgb), 0.42);
-  background: linear-gradient(155deg, rgba(31, 42, 59, 0.96), rgba(17, 24, 35, 0.9));
-  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.24), 0 0 32px rgba(var(--brand-blue-rgb), 0.08);
+.feature-card:hover,
+.feature-card:focus-within {
+  transform: translateY(-3px);
 }
 
 .feature-icon {
@@ -525,13 +592,11 @@ h2 {
   color: var(--accent);
   background: linear-gradient(145deg, rgba(var(--brand-cyan-rgb), 0.13), rgba(var(--brand-blue-rgb), 0.06));
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-  transition: color 200ms ease, background 200ms ease, transform 200ms ease;
+  transition: transform var(--motion-fast) var(--ease-out-product);
 }
 
 .feature-card:hover .feature-icon {
-  transform: translateY(-2px) scale(1.04);
-  color: #a5f7ff;
-  background: rgba(var(--brand-cyan-rgb), 0.17);
+  transform: translateY(-1px) scale(1.02);
 }
 
 .feature-icon svg {
@@ -599,7 +664,7 @@ h3 {
   border-radius: 20px;
   background: linear-gradient(155deg, rgba(25, 34, 49, 0.97), rgba(13, 19, 31, 0.98));
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
-  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+  transition: transform var(--motion-standard) var(--ease-out-product);
 }
 
 .how-step:hover {
@@ -699,12 +764,13 @@ h3 {
   color: var(--text-secondary);
   text-align: left;
   cursor: pointer;
-  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+  transition: transform var(--motion-fast) var(--ease-out-product), opacity var(--motion-fast) ease-out;
 }
 
 .product-gallery-tab:hover {
   border-color: rgba(var(--brand-cyan-rgb), 0.42);
   background: rgba(25, 34, 49, 0.92);
+  opacity: 0.95;
   transform: translateY(-1px);
 }
 
@@ -826,7 +892,6 @@ h3 {
   border: 1px solid var(--border);
   border-radius: 16px;
   background: linear-gradient(145deg, rgba(25, 34, 49, 0.7), rgba(17, 24, 35, 0.78));
-  transition: border-color 180ms ease, background 180ms ease;
 }
 
 .faq-item:hover,
@@ -1489,7 +1554,6 @@ h3 {
     font-size: 14px;
     font-weight: 650;
     text-decoration: none;
-    transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
   }
 
   .mobile-drawer-links a:hover,
@@ -1728,13 +1792,47 @@ h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-copy .eyebrow,
+  .hero-copy h1,
+  .hero-copy > p,
+  .hero-actions,
+  .hero-note,
+  .hero-facts {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  html.has-scroll-reveal [data-reveal],
+  html.has-scroll-reveal [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .button,
+  .feature-card,
+  .feature-icon,
+  .hero-facts,
+  .how-step,
+  .product-gallery-tab,
+  .nav-links a {
+    transition: none;
+  }
+
+  .button:hover,
+  .button:active,
+  .feature-card:hover,
+  .feature-card:focus-within,
+  .feature-card:hover .feature-icon,
+  .hero-facts:hover,
+  .how-step:hover,
+  .product-gallery-tab:hover {
+    transform: none;
   }
 }
 
@@ -1742,6 +1840,11 @@ h3 {
   .hero-facts:hover,
   .feature-card:hover,
   .how-step:hover {
+    transform: none;
+  }
+
+  .feature-card:hover .feature-icon,
+  .button:hover {
     transform: none;
   }
 }
